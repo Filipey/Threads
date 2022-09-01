@@ -9,7 +9,7 @@ public class MyThread implements Runnable{
     /**
      * Flag para definir qual operação a Thread irá executar
      */
-    private int type = 0;
+    private int type;
     /**
      * Variável que armazena resultado final
      */

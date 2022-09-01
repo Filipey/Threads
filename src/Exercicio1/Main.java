@@ -1,5 +1,6 @@
 package Exercicio1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -39,6 +40,8 @@ public class Main {
         for (int i = 0; i < array.length; i++) { // inicializando o array
             array[i] = i;
         }
+
+        System.out.println("O array gerado foi: " + Arrays.toString(array) + "\n");
 
         return array;
     }
