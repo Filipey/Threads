@@ -13,7 +13,7 @@ public class MyThread implements Runnable{
     /**
      * Variável que armazena resultado final
      */
-    int result;
+    private Long result;
 
     /**
      *
@@ -23,7 +23,7 @@ public class MyThread implements Runnable{
     public MyThread(int[] arr, int type) {
         this.arr = arr;
         this.type = type;
-        int result = 0;
+        this.result = 0L;
     }
     @Override
     public void run() {
@@ -43,13 +43,13 @@ public class MyThread implements Runnable{
     }
 
     private void multiply() {
-        this.result = 1; // Impedindo multiplicação por 0
+        this.result = 1L; // Impedindo multiplicação por 0
         for (int i = 1; i < this.arr.length; i++) {
-            this.result *= i;
+            this.result *= this.arr[i];
         }
     }
 
-    public int getResult() {
+    public Long getResult() {
         return this.result;
     }
 }
