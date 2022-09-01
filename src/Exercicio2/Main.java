@@ -21,7 +21,15 @@ public class Main {
 
         System.out.println("O valor final do contador é: " + counter.getValue());
 
-        System.out.println("\nDessa forma, podemos ver que cada Thread não incrementou 1000 vezes o Contador,\n" +
-                "sendo que esperava-se o valor final igual a 2000 mas obtivemos " + counter.getValue());
+        System.out.println("\nRodando o programa múltiplas vezes, " +
+                "observa-se que o resultado do contador é diferente a cada execução.");
+        System.out.println("\nPor exemplo, ambas as Threads executaram 1000 vezes," +
+                " mas o valor 2000 não é necessariamente o resultado");
+        System.out.println("\nExecuções da Thread 1: " +t1.getExecutionCounter() +" \n" +
+                "Execuções da Thread 2: " + t2.getExecutionCounter());
+
+        System.out.println("\nIsso pode significar que ambas as Threads " +
+                "fizeram algumas incrementações com valores antigos de Counter, " +
+                "gerando as vezes resultados diferentes de 2000");
     }
 }
